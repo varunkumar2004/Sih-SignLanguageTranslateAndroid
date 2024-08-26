@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -30,17 +31,14 @@ fun FloatingBottomBar(
     onPromptChange: (String) -> Unit,
     onPromptSend: () -> Unit
 ) {
+    val keyboardController = LocalSoftwareKeyboardController.current
+
     BottomAppBar(
         modifier = modifier,
-        contentPadding = PaddingValues(horizontal = 16.dp),
-        containerColor = Color.Transparent
+        containerColor = color
     ) {
         TextField(
-            modifier = modifier
-                .shadow(
-                    elevation = 50.dp,
-                    shape = RoundedCornerShape(30.dp)
-                ),
+            modifier = modifier,
             shape = RoundedCornerShape(30.dp),
             colors = TextFieldDefaults.colors(
                 focusedIndicatorColor = Color.Transparent,
@@ -49,11 +47,14 @@ fun FloatingBottomBar(
                 focusedContainerColor = color,
                 focusedTextColor = Color.Black,
                 unfocusedTextColor = Color.Black,
-                unfocusedContainerColor = color
+                unfocusedContainerColor = color,
+                cursorColor = Color.Black
             ),
             value = value,
             placeholder = {
-                Text(text = "translate")
+                Text(
+                    text = "translate"
+                )
             },
             trailingIcon = {
                 IconButton(
@@ -64,7 +65,13 @@ fun FloatingBottomBar(
                         containerColor = Color.Black,
                         contentColor = Color.White
                     ),
-                    onClick = onPromptSend
+                    onClick = {
+                        if (value.isNotEmpty() && value.isNotBlank()) {
+                            onPromptSend()
+                        }
+
+                        keyboardController?.hide()
+                    }
                 ) {
                     Icon(
                         imageVector = Icons.Default.ArrowForward,

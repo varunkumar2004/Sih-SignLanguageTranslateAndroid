@@ -46,7 +46,7 @@ fun HomeScreen(
     viewModel: HomeViewModel
 ) {
     val state by viewModel.state.collectAsState()
-    val lightPurple = Color(0xFFDED7EC)
+    val lightPurple = Color(0xFFECE9F3)
     val mediumPurple = Color(0xFFCFC1EC)
 
     Scaffold(

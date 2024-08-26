@@ -81,6 +81,7 @@ int dimen notification_small_icon_size_as_large 0x7f050012
 int dimen notification_subtext_size 0x7f050013
 int dimen notification_top_pad 0x7f050014
 int dimen notification_top_pad_large_text 0x7f050015
+int drawable holding 0x7f060017
 int drawable ic_call_answer 0x7f060001
 int drawable ic_call_answer_low 0x7f060002
 int drawable ic_call_answer_video 0x7f060003
