@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\sih\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\sih\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\sih\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\sih\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from E:\sih\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from E:\sih\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from E:\sih\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from E:\sih\app\src\main\AndroidManifest.xml:2:1-32:12
 MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\varun\.gradle\caches\transforms-4\37dd504139bb3bf7690faa659ba22d8d\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\varun\.gradle\caches\transforms-4\c13fe4cefd045d75e3c239a0e3f8290e\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.dagger:hilt-android:2.49] C:\Users\varun\.gradle\caches\transforms-4\27bbdd70922b39c6ad152383129a6cb8\transformed\hilt-android-2.49\AndroidManifest.xml:16:1-19:12
@@ -11,6 +11,7 @@ MERGED from [androidx.navigation:navigation-compose:2.5.1] C:\Users\varun\.gradl
 MERGED from [androidx.camera:camera-video:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\d037f5be849d5f721f3259c9f63b7184\transformed\camera-video-1.3.4\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.camera:camera-lifecycle:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\3abf9976d6f653e12afea0b4d1aff16c\transformed\camera-lifecycle-1.3.4\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:17:1-36:12
 MERGED from [androidx.camera:camera-view:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\d7b93beaa47baa1c73ab6a23fcbd205c\transformed\camera-view-1.3.4\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\varun\.gradle\caches\transforms-4\4e1790520147fcace83ef747249b804c\transformed\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\varun\.gradle\caches\transforms-4\51760e5d0d5337aaf5e767a8f5bf0c05\transformed\fragment-1.5.1\AndroidManifest.xml:17:1-24:12
@@ -96,10 +97,12 @@ ADDED from E:\sih\app\src\main\AndroidManifest.xml:7:5-70
 	android:name
 		ADDED from E:\sih\app\src\main\AndroidManifest.xml:7:22-68
 application
-ADDED from E:\sih\app\src\main\AndroidManifest.xml:9:5-31:19
-INJECTED from E:\sih\app\src\main\AndroidManifest.xml:9:5-31:19
+ADDED from E:\sih\app\src\main\AndroidManifest.xml:9:5-30:19
+INJECTED from E:\sih\app\src\main\AndroidManifest.xml:9:5-30:19
 MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:23:5-34:19
 MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:23:5-34:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\229d78f61468f673e99166258fde7573\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\229d78f61468f673e99166258fde7573\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\f83c0f90055e8f5eb837244271ab54d7\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
@@ -141,25 +144,23 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\varun\.gradle\cach
 	android:name
 		ADDED from E:\sih\app\src\main\AndroidManifest.xml:10:9-28
 activity#com.example.signlanguagetranslator.MainActivity
-ADDED from E:\sih\app\src\main\AndroidManifest.xml:20:9-30:20
-	android:label
-		ADDED from E:\sih\app\src\main\AndroidManifest.xml:23:13-45
+ADDED from E:\sih\app\src\main\AndroidManifest.xml:20:9-29:20
 	android:exported
 		ADDED from E:\sih\app\src\main\AndroidManifest.xml:22:13-36
 	android:theme
-		ADDED from E:\sih\app\src\main\AndroidManifest.xml:24:13-64
+		ADDED from E:\sih\app\src\main\AndroidManifest.xml:23:13-64
 	android:name
 		ADDED from E:\sih\app\src\main\AndroidManifest.xml:21:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\sih\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from E:\sih\app\src\main\AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from E:\sih\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from E:\sih\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from E:\sih\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from E:\sih\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\sih\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from E:\sih\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from E:\sih\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from E:\sih\app\src\main\AndroidManifest.xml:27:27-74
 uses-sdk
 INJECTED from E:\sih\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\sih\app\src\main\AndroidManifest.xml
@@ -178,6 +179,8 @@ MERGED from [androidx.camera:camera-lifecycle:1.3.4] C:\Users\varun\.gradle\cach
 MERGED from [androidx.camera:camera-lifecycle:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\3abf9976d6f653e12afea0b4d1aff16c\transformed\camera-lifecycle-1.3.4\AndroidManifest.xml:5:5-44
 MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:21:5-44
 MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:21:5-44
 MERGED from [androidx.camera:camera-view:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\d7b93beaa47baa1c73ab6a23fcbd205c\transformed\camera-view-1.3.4\AndroidManifest.xml:5:5-44
 MERGED from [androidx.camera:camera-view:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\d7b93beaa47baa1c73ab6a23fcbd205c\transformed\camera-view-1.3.4\AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\varun\.gradle\caches\transforms-4\4e1790520147fcace83ef747249b804c\transformed\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -312,6 +315,8 @@ MERGED from [com.google.dagger:dagger-lint-aar:2.49] C:\Users\varun\.gradle\cach
 		INJECTED from E:\sih\app\src\main\AndroidManifest.xml
 service#androidx.camera.core.impl.MetadataHolderService
 ADDED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:29:9-33:78
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:24:9-33:19
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:24:9-33:19
 	android:enabled
 		ADDED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:31:13-36
 	android:exported
@@ -320,6 +325,12 @@ ADDED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\tra
 		ADDED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:33:13-75
 	android:name
 		ADDED from [androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:30:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:30:13-32:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\66970d964d337bb883ef81bb7c5979ea\transformed\camera-camera2-1.3.4\AndroidManifest.xml:31:17-103
 activity#androidx.compose.ui.tooling.PreviewActivity
 ADDED from [androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\229d78f61468f673e99166258fde7573\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
 	android:exported

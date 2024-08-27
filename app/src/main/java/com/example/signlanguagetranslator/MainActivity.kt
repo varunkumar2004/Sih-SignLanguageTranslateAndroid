@@ -7,12 +7,15 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.camera.core.CameraSelector
 import androidx.camera.video.FileOutputOptions
 import androidx.camera.video.Recording
 import androidx.camera.video.VideoRecordEvent
+import androidx.camera.view.CameraController
 import androidx.camera.view.LifecycleCameraController
 import androidx.camera.view.video.AudioConfig
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -47,10 +50,18 @@ class MainActivity : ComponentActivity() {
             val sModifier = Modifier.fillMaxSize()
             val navController = rememberNavController()
 
+            val cameraController = remember {
+                LifecycleCameraController(applicationContext).apply {
+                    setEnabledUseCases(
+                        CameraController.VIDEO_CAPTURE
+                    )
+                }
+            }
+
             SignLanguageTranslatorTheme {
                 NavHost(
                     navController = navController,
-                    startDestination = Routes.Home.route
+                    startDestination = Routes.Camera.route
                 ) {
                     composable(route = Routes.Home.route) {
                         HomeScreen(
@@ -61,7 +72,17 @@ class MainActivity : ComponentActivity() {
 
                     composable(route = Routes.Camera.route) {
                         CameraScreen(
-                            modifier = sModifier
+                            modifier = sModifier,
+                            controller = cameraController,
+                            onCameraFlipClick = {
+                                cameraController.cameraSelector =
+                                    if (cameraController.cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA) {
+                                        CameraSelector.DEFAULT_FRONT_CAMERA
+                                    } else CameraSelector.DEFAULT_BACK_CAMERA
+                            },
+                            onCameraClick = {
+                                recordVideo(controller = cameraController)
+                            }
                         )
                     }
                 }

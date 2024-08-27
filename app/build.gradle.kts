@@ -72,6 +72,10 @@ dependencies {
 
     implementation("androidx.compose.material:material-icons-extended:1.3.1")
 
+    //camerax
+    val camerax_version = "1.3.0" // Use the latest version available
+    implementation("androidx.camera:camera-camera2:${camerax_version}")
+
     //hilt dependencies
     implementation("com.google.dagger:hilt-android:2.49")
     kapt("com.google.dagger:hilt-android-compiler:2.49")

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.signlanguagetranslator.app-mergeDebugResources-59:/values-nb/values-nb.xml",
+            "outputFile": "com.example.signlanguagetranslator.app-mergeDebugResources-60:/values-nb/values-nb.xml",
             "map": [
                 {
                     "source": "C:\\Users\\varun\\.gradle\\caches\\transforms-4\\f6b58317a8d259b5517322db39f8ce63\\transformed\\ui-release\\res\\values-nb\\values-nb.xml",
