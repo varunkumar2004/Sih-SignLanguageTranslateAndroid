@@ -44,7 +44,8 @@ import com.example.signlanguagetranslator.ui.viewmodels.HomeViewModel
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
-    viewModel: HomeViewModel
+    viewModel: HomeViewModel,
+    onCameraNavigate: () -> Unit
 ) {
     val state by viewModel.state.collectAsState()
     val lightPurple = Color(0xFFECE9F3)
@@ -56,7 +57,7 @@ fun HomeScreen(
             CenterAlignedTopAppBar(
                 title = { Text(text = "Translate") },
                 actions = {
-                    IconButton(onClick = { /*TODO*/ }) {
+                    IconButton(onClick = onCameraNavigate) {
                         Icon(
                             imageVector = Icons.Default.PhotoCameraBack,
                             contentDescription = null

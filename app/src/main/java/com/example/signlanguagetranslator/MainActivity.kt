@@ -61,12 +61,15 @@ class MainActivity : ComponentActivity() {
             SignLanguageTranslatorTheme {
                 NavHost(
                     navController = navController,
-                    startDestination = Routes.Camera.route
+                    startDestination = Routes.Home.route
                 ) {
                     composable(route = Routes.Home.route) {
                         HomeScreen(
                             modifier = sModifier,
-                            viewModel = homeViewModel
+                            viewModel = homeViewModel,
+                            onCameraNavigate = {
+                                navController.navigate(Routes.Camera.route)
+                            }
                         )
                     }
 
