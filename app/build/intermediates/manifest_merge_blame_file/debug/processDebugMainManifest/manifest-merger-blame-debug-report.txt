@@ -8,142 +8,162 @@
 8        android:minSdkVersion="24"
 9        android:targetSdkVersion="34" />
 10
-11    <permission
-11-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\c54855d5d2393dbc8d8f965750cbfe4b\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
-12        android:name="com.example.signlanguagetranslator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\c54855d5d2393dbc8d8f965750cbfe4b\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\c54855d5d2393dbc8d8f965750cbfe4b\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
-14
-15    <uses-permission android:name="com.example.signlanguagetranslator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\c54855d5d2393dbc8d8f965750cbfe4b\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\c54855d5d2393dbc8d8f965750cbfe4b\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->E:\sih\app\src\main\AndroidManifest.xml:5:5-27:19
-18        android:name="com.example.signlanguagetranslator.App"
-18-->E:\sih\app\src\main\AndroidManifest.xml:6:9-28
-19        android:allowBackup="true"
-19-->E:\sih\app\src\main\AndroidManifest.xml:7:9-35
-20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\c54855d5d2393dbc8d8f965750cbfe4b\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
-21        android:dataExtractionRules="@xml/data_extraction_rules"
-21-->E:\sih\app\src\main\AndroidManifest.xml:8:9-65
-22        android:debuggable="true"
-23        android:extractNativeLibs="false"
-24        android:fullBackupContent="@xml/backup_rules"
-24-->E:\sih\app\src\main\AndroidManifest.xml:9:9-54
-25        android:icon="@mipmap/ic_launcher"
-25-->E:\sih\app\src\main\AndroidManifest.xml:10:9-43
-26        android:label="@string/app_name"
-26-->E:\sih\app\src\main\AndroidManifest.xml:11:9-41
-27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->E:\sih\app\src\main\AndroidManifest.xml:12:9-54
-28        android:supportsRtl="true"
-28-->E:\sih\app\src\main\AndroidManifest.xml:13:9-35
-29        android:testOnly="true"
-30        android:theme="@style/Theme.SignLanguageTranslator" >
-30-->E:\sih\app\src\main\AndroidManifest.xml:14:9-60
-31        <activity
-31-->E:\sih\app\src\main\AndroidManifest.xml:16:9-26:20
-32            android:name="com.example.signlanguagetranslator.MainActivity"
-32-->E:\sih\app\src\main\AndroidManifest.xml:17:13-41
-33            android:exported="true"
-33-->E:\sih\app\src\main\AndroidManifest.xml:18:13-36
-34            android:label="@string/app_name"
-34-->E:\sih\app\src\main\AndroidManifest.xml:19:13-45
-35            android:theme="@style/Theme.SignLanguageTranslator" >
-35-->E:\sih\app\src\main\AndroidManifest.xml:20:13-64
-36            <intent-filter>
-36-->E:\sih\app\src\main\AndroidManifest.xml:21:13-25:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->E:\sih\app\src\main\AndroidManifest.xml:22:17-69
-37-->E:\sih\app\src\main\AndroidManifest.xml:22:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->E:\sih\app\src\main\AndroidManifest.xml:24:17-77
-39-->E:\sih\app\src\main\AndroidManifest.xml:24:27-74
-40            </intent-filter>
-41        </activity>
-42        <activity
-42-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\34ab548b3263af44c531be8c1604fa53\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
-43            android:name="androidx.compose.ui.tooling.PreviewActivity"
-43-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\34ab548b3263af44c531be8c1604fa53\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
-44            android:exported="true" />
-44-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\34ab548b3263af44c531be8c1604fa53\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
-45
-46        <provider
-46-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\55d0342e5b7df737f6c9072f97af7e62\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-47            android:name="androidx.startup.InitializationProvider"
-47-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\55d0342e5b7df737f6c9072f97af7e62\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-48            android:authorities="com.example.signlanguagetranslator.androidx-startup"
-48-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\55d0342e5b7df737f6c9072f97af7e62\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-49            android:exported="false" >
-49-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\55d0342e5b7df737f6c9072f97af7e62\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-50            <meta-data
-50-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\55d0342e5b7df737f6c9072f97af7e62\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-51-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\55d0342e5b7df737f6c9072f97af7e62\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-52                android:value="androidx.startup" />
-52-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\55d0342e5b7df737f6c9072f97af7e62\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-53            <meta-data
-53-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\varun\.gradle\caches\transforms-4\7bb5bd8e8518326f2fc42763809a2c0f\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-54-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\varun\.gradle\caches\transforms-4\7bb5bd8e8518326f2fc42763809a2c0f\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
-55                android:value="androidx.startup" />
-55-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\varun\.gradle\caches\transforms-4\7bb5bd8e8518326f2fc42763809a2c0f\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
-56            <meta-data
-56-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-57                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-57-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-58                android:value="androidx.startup" />
-58-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-59        </provider>
-60
-61        <activity
-61-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\a7fd65f769966f316e00fc11be98b707\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:23:9-25:39
-62            android:name="androidx.activity.ComponentActivity"
-62-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\a7fd65f769966f316e00fc11be98b707\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:24:13-63
-63            android:exported="true" />
-63-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\a7fd65f769966f316e00fc11be98b707\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:25:13-36
-64
-65        <receiver
-65-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-66            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-66-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-67            android:directBootAware="false"
-67-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-68            android:enabled="true"
-68-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-69            android:exported="true"
-69-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-70            android:permission="android.permission.DUMP" >
-70-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-71            <intent-filter>
-71-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-72                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-72-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-72-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-73            </intent-filter>
-74            <intent-filter>
-74-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-75                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-75-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-75-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-76            </intent-filter>
-77            <intent-filter>
-77-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-78                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-78-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-78-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-79            </intent-filter>
-80            <intent-filter>
-80-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-81                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-81-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-81-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\670af41af94a2fb0438f79e3bb3c98b2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-82            </intent-filter>
-83        </receiver>
-84    </application>
-85
-86</manifest>
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->E:\sih\app\src\main\AndroidManifest.xml:5:5-6:71
+11-->E:\sih\app\src\main\AndroidManifest.xml:5:22-62
+12    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+12-->E:\sih\app\src\main\AndroidManifest.xml:7:5-70
+12-->E:\sih\app\src\main\AndroidManifest.xml:7:22-68
+13
+14    <permission
+14-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\56dec0b5255a546499ff265cef9aa311\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.signlanguagetranslator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\56dec0b5255a546499ff265cef9aa311\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\56dec0b5255a546499ff265cef9aa311\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.signlanguagetranslator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\56dec0b5255a546499ff265cef9aa311\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\56dec0b5255a546499ff265cef9aa311\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->E:\sih\app\src\main\AndroidManifest.xml:9:5-31:19
+21        android:name="com.example.signlanguagetranslator.App"
+21-->E:\sih\app\src\main\AndroidManifest.xml:10:9-28
+22        android:allowBackup="true"
+22-->E:\sih\app\src\main\AndroidManifest.xml:11:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.12.0] C:\Users\varun\.gradle\caches\transforms-4\56dec0b5255a546499ff265cef9aa311\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+24        android:dataExtractionRules="@xml/data_extraction_rules"
+24-->E:\sih\app\src\main\AndroidManifest.xml:12:9-65
+25        android:debuggable="true"
+26        android:extractNativeLibs="false"
+27        android:fullBackupContent="@xml/backup_rules"
+27-->E:\sih\app\src\main\AndroidManifest.xml:13:9-54
+28        android:icon="@mipmap/ic_launcher"
+28-->E:\sih\app\src\main\AndroidManifest.xml:14:9-43
+29        android:label="@string/app_name"
+29-->E:\sih\app\src\main\AndroidManifest.xml:15:9-41
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->E:\sih\app\src\main\AndroidManifest.xml:16:9-54
+31        android:supportsRtl="true"
+31-->E:\sih\app\src\main\AndroidManifest.xml:17:9-35
+32        android:testOnly="true"
+33        android:theme="@style/Theme.SignLanguageTranslator" >
+33-->E:\sih\app\src\main\AndroidManifest.xml:18:9-60
+34        <activity
+34-->E:\sih\app\src\main\AndroidManifest.xml:20:9-30:20
+35            android:name="com.example.signlanguagetranslator.MainActivity"
+35-->E:\sih\app\src\main\AndroidManifest.xml:21:13-41
+36            android:exported="true"
+36-->E:\sih\app\src\main\AndroidManifest.xml:22:13-36
+37            android:label="@string/app_name"
+37-->E:\sih\app\src\main\AndroidManifest.xml:23:13-45
+38            android:theme="@style/Theme.SignLanguageTranslator" >
+38-->E:\sih\app\src\main\AndroidManifest.xml:24:13-64
+39            <intent-filter>
+39-->E:\sih\app\src\main\AndroidManifest.xml:25:13-29:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->E:\sih\app\src\main\AndroidManifest.xml:26:17-69
+40-->E:\sih\app\src\main\AndroidManifest.xml:26:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->E:\sih\app\src\main\AndroidManifest.xml:28:17-77
+42-->E:\sih\app\src\main\AndroidManifest.xml:28:27-74
+43            </intent-filter>
+44        </activity>
+45        <!--
+46        Service for holding metadata. Cannot be instantiated.
+47        Metadata will be merged from other manifests.
+48        -->
+49        <service
+49-->[androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:29:9-33:78
+50            android:name="androidx.camera.core.impl.MetadataHolderService"
+50-->[androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:30:13-75
+51            android:enabled="false"
+51-->[androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:31:13-36
+52            android:exported="false" />
+52-->[androidx.camera:camera-core:1.3.4] C:\Users\varun\.gradle\caches\transforms-4\13223c8b8f31e150e8594cc2146ea4c2\transformed\camera-core-1.3.4\AndroidManifest.xml:32:13-37
+53
+54        <activity
+54-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\229d78f61468f673e99166258fde7573\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+55            android:name="androidx.compose.ui.tooling.PreviewActivity"
+55-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\229d78f61468f673e99166258fde7573\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+56            android:exported="true" />
+56-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\229d78f61468f673e99166258fde7573\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+57
+58        <provider
+58-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\f83c0f90055e8f5eb837244271ab54d7\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+59            android:name="androidx.startup.InitializationProvider"
+59-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\f83c0f90055e8f5eb837244271ab54d7\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+60            android:authorities="com.example.signlanguagetranslator.androidx-startup"
+60-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\f83c0f90055e8f5eb837244271ab54d7\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+61            android:exported="false" >
+61-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\f83c0f90055e8f5eb837244271ab54d7\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+62            <meta-data
+62-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\f83c0f90055e8f5eb837244271ab54d7\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\f83c0f90055e8f5eb837244271ab54d7\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+64                android:value="androidx.startup" />
+64-->[androidx.emoji2:emoji2:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\f83c0f90055e8f5eb837244271ab54d7\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+65            <meta-data
+65-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\varun\.gradle\caches\transforms-4\e73bf2d4d6c92dd19d546ba44c9c131e\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+66-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\varun\.gradle\caches\transforms-4\e73bf2d4d6c92dd19d546ba44c9c131e\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+67                android:value="androidx.startup" />
+67-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\varun\.gradle\caches\transforms-4\e73bf2d4d6c92dd19d546ba44c9c131e\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+68            <meta-data
+68-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+69                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+69-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+70                android:value="androidx.startup" />
+70-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+71        </provider>
+72
+73        <activity
+73-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\f8b494ef5ea9047be4f2a95370e4eef3\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:23:9-25:39
+74            android:name="androidx.activity.ComponentActivity"
+74-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\f8b494ef5ea9047be4f2a95370e4eef3\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:24:13-63
+75            android:exported="true" />
+75-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\varun\.gradle\caches\transforms-4\f8b494ef5ea9047be4f2a95370e4eef3\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:25:13-36
+76
+77        <receiver
+77-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+78            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+78-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+79            android:directBootAware="false"
+79-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+80            android:enabled="true"
+80-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+81            android:exported="true"
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+82            android:permission="android.permission.DUMP" >
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+83            <intent-filter>
+83-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+84                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+85            </intent-filter>
+86            <intent-filter>
+86-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+87                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+88            </intent-filter>
+89            <intent-filter>
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+90                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+91            </intent-filter>
+92            <intent-filter>
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+93                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\varun\.gradle\caches\transforms-4\c665049ebfbd63fa8fc14b18997af24f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+94            </intent-filter>
+95        </receiver>
+96    </application>
+97
+98</manifest>

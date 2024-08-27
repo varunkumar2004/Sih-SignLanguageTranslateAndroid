@@ -71,6 +71,7 @@ fun TextPrompt(
 
     val annotatedText = buildAnnotatedString {
         val words = value.split(" ")
+
         words.forEachIndexed { i, word ->
             if (i == index) {
                 withStyle(

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SignLanguageTranslator.iml" filepath="$PROJECT_DIR$/.idea/modules/SignLanguageTranslator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SignLanguageTranslator.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SignLanguageTranslator.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SignLanguageTranslator.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SignLanguageTranslator.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SignLanguageTranslator.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SignLanguageTranslator.app.main.iml" />

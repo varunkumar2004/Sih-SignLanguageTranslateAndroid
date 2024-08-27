@@ -28,6 +28,5 @@ class HomeViewModel @Inject constructor() : ViewModel() {
 
 data class HomeState(
     val textQuery: String = "",
-    var chat: List<String> = listOf("nothing is ever same ever."),
-    val isPlaying: Boolean = false,
+    var chat: List<String> = listOf("nothing is ever same ever.")
 )
