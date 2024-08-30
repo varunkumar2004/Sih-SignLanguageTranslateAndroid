@@ -80,4 +80,10 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.49")
     kapt("com.google.dagger:hilt-android-compiler:2.49")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
+    //mediapipe dependencies
+    implementation("com.google.mediapipe:mediapipe_holistic:0.8.9")
+    implementation("com.google.mediapipe:mediapipe_face_detection:0.8.9")
+    implementation("com.google.mediapipe:tasks-vision:0.10.0")
+    implementation("org.tensorflow:tensorflow-lite:2.10.0")
 }
