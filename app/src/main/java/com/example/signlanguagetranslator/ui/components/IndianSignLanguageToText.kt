@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun IndianSignLanguageToText(
     modifier: Modifier = Modifier,
-    color: Color = Color.LightGray,
     value: String
 ) {
     val shape = RoundedCornerShape(20.dp)
@@ -32,7 +31,7 @@ fun IndianSignLanguageToText(
     Column(
         modifier = modifier
             .clip(shape)
-            .background(color)
+            .background(MaterialTheme.colorScheme.primary)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
@@ -49,7 +48,7 @@ fun IndianSignLanguageToText(
             Text(
                 text = value,
                 style = MaterialTheme.typography.bodyLarge,
-                color = Color.Black
+                color = MaterialTheme.colorScheme.tertiary
             )
         }
 

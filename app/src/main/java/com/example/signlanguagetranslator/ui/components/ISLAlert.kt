@@ -3,32 +3,29 @@ package com.example.signlanguagetranslator.ui.components
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Pause
-import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.outlined.Replay
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedCard
+import androidx.compose.material.icons.outlined.Translate
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.ListItem
+import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -45,12 +42,12 @@ import com.example.signlanguagetranslator.R
 import kotlinx.coroutines.delay
 
 @Composable
-fun TextPrompt(
+fun ISLAlert(
     modifier: Modifier = Modifier,
-    color: Color,
-    value: String
+    value: String,
+    onDismissAlert: () -> Unit
 ) {
-    val shape = RoundedCornerShape(30.dp)
+    val shape = RoundedCornerShape(20.dp)
     val images = listOf(
         R.drawable.praying,
         R.drawable.holding,
@@ -76,7 +73,7 @@ fun TextPrompt(
             if (i == index) {
                 withStyle(
                     style = SpanStyle(
-                        fontWeight = FontWeight.Black,
+                        fontWeight = FontWeight.Bold,
                         color = Color.Black
                     )
                 ) {
@@ -90,66 +87,83 @@ fun TextPrompt(
         }
     }
 
-    ElevatedCard(
+
+    AlertDialog(
         modifier = modifier,
-        colors = CardDefaults.elevatedCardColors(
-            containerColor = color,
-            contentColor = Color.Black
-        ),
-        shape = shape
-    ) {
-        Column(
-            modifier = modifier
-        ) {
+        containerColor = Color.White,
+        icon = {
             Row(
-                modifier = Modifier
-                    .padding(16.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 Icon(
-                    modifier = Modifier.size(16.dp),
-                    imageVector = Icons.Default.Translate,
+                    modifier = Modifier.size(20.dp),
+                    imageVector = Icons.Outlined.Translate,
                     contentDescription = null
                 )
 
-//            Text(
-//                text = value
-//            )
-
                 Text(
-                    text = annotatedText
+                    text = "Indian Sign Language",
+                    color = Color.Black,
+                    style = MaterialTheme.typography.bodyLarge
                 )
             }
-
-            Box(
-                modifier = modifier
-                    .clip(shape = RoundedCornerShape(20.dp))
-                    .padding(horizontal = 16.dp)
-                    .padding(bottom = 16.dp),
-                contentAlignment = Alignment.Center
+        },
+        text = {
+            Column(
+                modifier = modifier,
+                verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                AnimatedContent(
-                    targetState = index,
-                    label = "Scroll Animation"
-                ) { index ->
-                    Image(
-                        modifier = Modifier.size(200.dp),
-                        painter = painterResource(id = images[index]),
-                        contentDescription = "ISL Image 2"
-                    )
-                }
+                Text(
+                    text = annotatedText,
+                    color = Color.DarkGray
+                )
 
-                IconButton(
-                    modifier = Modifier.align(Alignment.BottomEnd),
-                    onClick = { index = 0 }
+                Box(
+                    modifier = modifier
+                        .clip(shape = shape)
+                        .background(MaterialTheme.colorScheme.primary),
+                    contentAlignment = Alignment.Center
                 ) {
-                    Icon(
-                        imageVector = Icons.Outlined.Replay,
-                        contentDescription = null
-                    )
+                    AnimatedContent(
+                        modifier = modifier
+                            .padding(vertical = 16.dp),
+                        targetState = index,
+                        label = "Scroll Animation"
+                    ) { index ->
+                        Image(
+                            modifier = Modifier.size(200.dp),
+                            painter = painterResource(id = images[index]),
+                            contentDescription = "ISL Image 2"
+                        )
+                    }
                 }
             }
+        },
+        onDismissRequest = onDismissAlert,
+        dismissButton = {
+            IconButton(
+                onClick = { index = 0 },
+                colors = IconButtonDefaults.iconButtonColors(
+                    contentColor = Color.Black
+                )
+            ) {
+                Icon(
+                    imageVector = Icons.Outlined.Replay,
+                    contentDescription = null
+                )
+            }
+        },
+        confirmButton = {
+            Button(
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.secondary,
+                    contentColor = Color.Black
+                ),
+                onClick = onDismissAlert
+            ) {
+                Text(text = "Done")
+            }
         }
-    }
+    )
 }

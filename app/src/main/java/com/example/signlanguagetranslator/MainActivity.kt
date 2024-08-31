@@ -97,12 +97,6 @@ class MainActivity : ComponentActivity() {
                             modifier = sModifier,
                             controller = cameraController,
                             isRecording = isCameraRecording,
-                            onCameraFlipClick = {
-                                cameraController.cameraSelector =
-                                    if (cameraController.cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA) {
-                                        CameraSelector.DEFAULT_FRONT_CAMERA
-                                    } else CameraSelector.DEFAULT_BACK_CAMERA
-                            },
                             onCameraClick = {
                                 recordVideo(
                                     controller = cameraController,

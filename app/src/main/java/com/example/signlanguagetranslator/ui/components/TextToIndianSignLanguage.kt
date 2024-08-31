@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun TextToIndianSignLanguage(
     modifier: Modifier = Modifier,
-    color: Color = Color.LightGray,
     value: String,
     onTranslate: () -> Unit
 ) {
@@ -36,7 +35,7 @@ fun TextToIndianSignLanguage(
             .clip(shape)
             .border(1.dp, Color.LightGray, shape)
             .clickable { onTranslate() }
-            .background(color)
+            .background(MaterialTheme.colorScheme.primary)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {

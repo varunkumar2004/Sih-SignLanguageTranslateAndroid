@@ -14,6 +14,7 @@ import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -27,7 +28,6 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun FloatingBottomBar(
     modifier: Modifier = Modifier,
-    color: Color,
     value: String,
     onPromptChange: (String) -> Unit,
     onPromptSend: () -> Unit,
@@ -38,11 +38,11 @@ fun FloatingBottomBar(
         focusedIndicatorColor = Color.Transparent,
         unfocusedIndicatorColor = Color.Transparent,
         disabledIndicatorColor = Color.Transparent,
-        focusedTextColor = Color.Black,
-        unfocusedTextColor = Color.Black,
-        focusedContainerColor = color,
-        unfocusedContainerColor = color,
-        cursorColor = Color.Black
+        focusedTextColor = MaterialTheme.colorScheme.tertiary,
+        unfocusedTextColor = MaterialTheme.colorScheme.tertiary,
+        focusedContainerColor = MaterialTheme.colorScheme.secondary,
+        unfocusedContainerColor = MaterialTheme.colorScheme.secondary,
+        cursorColor = MaterialTheme.colorScheme.tertiary
     )
 
     BottomAppBar(
@@ -71,7 +71,7 @@ fun FloatingBottomBar(
                             .size(TextFieldDefaults.MinHeight),
                         colors = IconButtonDefaults.iconButtonColors(
                             containerColor = Color.Transparent,
-                            contentColor = Color.Black
+                            contentColor = MaterialTheme.colorScheme.tertiary
                         ),
                         onClick = {
                             if (value.isNotEmpty() && value.isNotBlank()) {
@@ -96,12 +96,13 @@ fun FloatingBottomBar(
                 modifier = Modifier
                     .size(TextFieldDefaults.MinHeight),
                 colors = IconButtonDefaults.iconButtonColors(
-                    containerColor = Color.Black,
-                    contentColor = Color.White
+                    containerColor = MaterialTheme.colorScheme.tertiary,
+                    contentColor = MaterialTheme.colorScheme.primary
                 ),
                 onClick = onVideoTranslate
             ) {
                 Icon(
+                    tint = MaterialTheme.colorScheme.primary,
                     imageVector = Icons.Outlined.Videocam,
                     contentDescription = null
                 )
