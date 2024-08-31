@@ -1,0 +1,22 @@
+node {
+  calculator: "ImageToTensorCalculator"
+  input_stream: "IMAGE:input_image"
+  output_stream: "TENSORS:image_tensor"
+}
+
+node {
+  calculator: "TfLiteInferenceCalculator"
+  input_stream: "TENSORS:image_tensor"
+  output_stream: "TENSORS:output_tensor"
+  options: {
+    [mediapipe.TfLiteInferenceCalculatorOptions.ext] {
+      model_path: "gesture_recognition_model.tflite"
+    }
+  }
+}
+
+node {
+  calculator: "TensorToClassificationCalculator"
+  input_stream: "TENSORS:output_tensor"
+  output_stream: "CLASSIFICATION:recognized_gesture"
+}

@@ -1,6 +1,8 @@
 package com.example.signlanguagetranslator.ui.viewmodels
 
+import android.net.Uri
 import androidx.lifecycle.ViewModel
+import com.example.signlanguagetranslator.data.SignText
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -18,16 +20,31 @@ class HomeViewModel @Inject constructor() : ViewModel() {
 
     fun sendPrompt() {
         _state.update {
+            val newChat = SignText(
+                value = it.textQuery,
+                signToText = false
+            )
+
             it.copy(
-                chat = it.chat + it.textQuery,
+                chat = it.chat + newChat,
                 textQuery = "",
             )
         }
+    }
+
+    fun updateVideoUri(uri: String) {
+        _state.update { it.copy(videoUrl = uri) }
     }
 }
 
 data class HomeState(
     val textQuery: String = "",
-    var chat: List<String> = listOf("nothing is ever same ever."),
-    var isCameraRecording: Boolean = false
+    var chat: List<SignText> = listOf(
+        SignText(
+            value = "Hello World",
+            signToText = true
+        )
+    ),
+    var isCameraRecording: Boolean = false,
+    val videoUrl: String = ""
 )

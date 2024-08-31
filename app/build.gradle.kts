@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.cli.jvm.main
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -40,6 +42,7 @@ android {
     }
     buildFeatures {
         compose = true
+        mlModelBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -62,6 +65,9 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.camera.view)
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
+    implementation(libs.androidx.media3.exoplayer)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -82,8 +88,7 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     //mediapipe dependencies
-    implementation("com.google.mediapipe:mediapipe_holistic:0.8.9")
-    implementation("com.google.mediapipe:mediapipe_face_detection:0.8.9")
+//    implementation("com.google.mediapipe:mediapipe-framework:0.9.3")
     implementation("com.google.mediapipe:tasks-vision:0.10.0")
     implementation("org.tensorflow:tensorflow-lite:2.10.0")
 }

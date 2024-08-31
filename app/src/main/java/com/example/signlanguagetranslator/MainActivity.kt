@@ -2,6 +2,9 @@ package com.example.signlanguagetranslator
 
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.media.MediaMetadataRetriever
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -9,7 +12,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.camera.core.CameraSelector
-import androidx.camera.core.ImageProxy
 import androidx.camera.video.FileOutputOptions
 import androidx.camera.video.Recording
 import androidx.camera.video.VideoRecordEvent
@@ -17,7 +19,7 @@ import androidx.camera.view.CameraController
 import androidx.camera.view.LifecycleCameraController
 import androidx.camera.view.video.AudioConfig
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -34,9 +36,12 @@ import com.example.signlanguagetranslator.ui.screens.HomeScreen
 import com.example.signlanguagetranslator.ui.theme.SignLanguageTranslatorTheme
 import com.example.signlanguagetranslator.ui.viewmodels.HomeViewModel
 import com.example.signlanguagetranslator.utils.Routes
-import com.google.mediapipe.formats.proto.LandmarkProto
+import com.google.mediapipe.framework.image.BitmapImageBuilder
+import com.google.mediapipe.tasks.core.BaseOptions
 import com.google.mediapipe.tasks.vision.core.RunningMode
+import com.google.mediapipe.tasks.vision.gesturerecognizer.GestureRecognizer
 import com.google.mediapipe.tasks.vision.handlandmarker.HandLandmarker
+import com.google.mediapipe.tasks.vision.handlandmarker.HandLandmarkerResult
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 
@@ -69,9 +74,6 @@ class MainActivity : ComponentActivity() {
                 mutableStateOf(false)
             }
 
-
-
-
             SignLanguageTranslatorTheme {
                 NavHost(
                     navController = navController,
@@ -83,6 +85,9 @@ class MainActivity : ComponentActivity() {
                             viewModel = homeViewModel,
                             onCameraNavigate = {
                                 navController.navigate(Routes.Camera.route)
+                            },
+                            onProcessImage = {
+
                             }
                         )
                     }
@@ -101,6 +106,7 @@ class MainActivity : ComponentActivity() {
                             onCameraClick = {
                                 recordVideo(
                                     controller = cameraController,
+                                    viewModel = homeViewModel,
                                     cameraRecording = { isRecording ->
                                         isCameraRecording = isRecording
                                     }
@@ -116,15 +122,16 @@ class MainActivity : ComponentActivity() {
     @SuppressLint("MissingPermission")
     private fun recordVideo(
         controller: LifecycleCameraController,
+        viewModel: HomeViewModel,
         cameraRecording: (Boolean) -> Unit
     ) {
-        if(recording != null) {
+        if (recording != null) {
             recording?.stop()
             recording = null
             return
         }
 
-        if(!hasRequiredPermissions()) {
+        if (!hasRequiredPermissions()) {
             return
         }
 
@@ -134,7 +141,7 @@ class MainActivity : ComponentActivity() {
             AudioConfig.create(true),
             ContextCompat.getMainExecutor(applicationContext),
         ) { event ->
-            when(event) {
+            when (event) {
                 is VideoRecordEvent.Start -> {
                     cameraRecording(true)
                 }
@@ -142,7 +149,7 @@ class MainActivity : ComponentActivity() {
                 is VideoRecordEvent.Finalize -> {
                     cameraRecording(false)
 
-                    if(event.hasError()) {
+                    if (event.hasError()) {
                         recording?.close()
                         recording = null
 
@@ -152,9 +159,12 @@ class MainActivity : ComponentActivity() {
                             Toast.LENGTH_LONG
                         ).show()
                     } else {
+                        val videoPath = outputFile.absolutePath
+                        viewModel.updateVideoUri(videoPath)
+
                         Toast.makeText(
                             applicationContext,
-                            "Video capture succeeded",
+                            "Video capture succeeded. saved to ${videoPath}",
                             Toast.LENGTH_LONG
                         ).show()
                     }
@@ -162,51 +172,6 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-
-//    private fun setupHandLandmarker() {
-//        // Set options for HandLandmarker
-//        val options = HandLandmarkerOptions.builder()
-//            .setBaseOptions(HandLandmarkerOptions.BaseOptions.builder()
-//                .setModelAssetPath("hand_landmarker.task") // Your MediaPipe hand landmark model
-//                .build())
-//            .setRunningMode(RunningMode.LIVE_STREAM)
-//            .build()
-//
-//        // Initialize Hand Landmarker
-//        val handLandmarker = HandLandmarker.createFromOptions(this, options)
-//    }
-//
-//    private fun processImage(imageProxy: ImageProxy) {
-//        // Convert ImageProxy to Bitmap or other format required by MediaPipe
-//        val bitmap = imageProxy.toBitmap()  // Implement this conversion method
-//
-//        // Run the hand landmark detection on the bitmap
-//        val results = handLandmarker.detect(bitmap)
-//        // Handle the results (landmarks, etc.)
-//        handleHandLandmarkerResult(results)
-//
-//        imageProxy.close()
-//    }
-
-//    private fun setupHolistic() {
-//        val options = HolisticOptions.builder()
-//            .setMinDetectionConfidence(0.75f)
-//            .setMinTrackingConfidence(0.75f)
-//            .build()
-//
-//        holistic = Holistic(this, options)
-//        holistic.setResultListener { result: HolisticResult? ->
-//            if (result != null) {
-//                handleHolisticResult(result)
-//            }
-//        }
-//    }
-//
-//    private fun handleHolisticResult(result: HolisticResult) {
-//        // Extract landmarks and perform prediction logic
-//        val landmarks: List<LandmarkProto.NormalizedLandmarkList> = result.multiHandLandmarks()
-//        // Implement your prediction logic here using the extracted landmarks.
-//    }
 
     private fun hasRequiredPermissions(): Boolean {
         return CAMERAX_PERMISSIONS.all {

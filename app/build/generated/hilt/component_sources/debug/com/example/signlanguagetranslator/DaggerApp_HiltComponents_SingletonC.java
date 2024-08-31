@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 import com.example.signlanguagetranslator.ui.viewmodels.HomeViewModel;
 import com.example.signlanguagetranslator.ui.viewmodels.HomeViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
@@ -26,7 +28,6 @@ import dagger.hilt.android.internal.modules.ApplicationContextModule;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
-import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import javax.inject.Provider;
@@ -363,7 +364,7 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return Collections.<String>singleton(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+      return ImmutableSet.<String>of(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide());
     }
 
     @Override
@@ -409,12 +410,12 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return Collections.<String, Provider<ViewModel>>singletonMap("com.example.signlanguagetranslator.ui.viewmodels.HomeViewModel", ((Provider) homeViewModelProvider));
+      return ImmutableMap.<String, Provider<ViewModel>>of("com.example.signlanguagetranslator.ui.viewmodels.HomeViewModel", ((Provider) homeViewModelProvider));
     }
 
     @Override
     public Map<String, Object> getHiltViewModelAssistedMap() {
-      return Collections.<String, Object>emptyMap();
+      return ImmutableMap.<String, Object>of();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -530,7 +531,7 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @Override
     public Set<Boolean> getDisableFragmentGetContextFix() {
-      return Collections.<Boolean>emptySet();
+      return ImmutableSet.<Boolean>of();
     }
 
     @Override
